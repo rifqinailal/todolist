@@ -5,7 +5,7 @@
     extend: {},
   },
   daisyui: {
-    themes: ["nord"],
+    themes: ["dark"],
   },
 
   plugins: [require('daisyui'),],

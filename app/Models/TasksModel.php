@@ -9,7 +9,7 @@ class TasksModel extends Model
     protected $table            = 'Tasks';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
-    protected $allowedFields    = ['title','description','status','deadline'];
+    protected $allowedFields = ['title', 'description', 'status', 'deadline', 'created_at', 'updated_at'];
     
 
     // Dates

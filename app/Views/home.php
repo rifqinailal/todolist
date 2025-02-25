@@ -92,8 +92,8 @@
                         <a href="/delete/<?= $item['id']; ?>"> <button class="btn btn-error">hapus</button></a>
                         <div>
                             <a href="#">
-                                <button class="btn btn-warning font-semibold" onclick="my_modal_<?= $item['id']; ?>.showModal()">Edit</button>
-                                <dialog id="my_modal_<?= $item['id']; ?>" class="modal">
+                                <button class="btn btn-warning font-semibold" onclick="my_modal_2.showModal()">Edit</button>
+                                <dialog id="my_modal_2" class="modal">
                                     <div class="modal-box">
                                         <div>
                                             <form action="/update/<?= $item['id']; ?>" method="POST">
@@ -169,7 +169,7 @@
     </div>
     <!-- desktop -->
     <?php if (count($tasks) == 0) : ?>
-        <h1 class="font-semibold text-xl sm:text-2xl text-center m-10 bg-primary text-black py-2 rounded-lg">tambahkan list baru</h1>
+        <h1 class="font-semibold text-xl sm:text-2xl text-center m-10 bg-primary text-white py-2 rounded-lg">tambahkan list baru</h1>
     <?php endif ?>
     <?php foreach ($tasks as $item) : ?>
         <div class="hidden sm:grid grid-cols-6 items-center border border-black rounded-lg my-4 py-3">
@@ -185,8 +185,8 @@
                     <a href="/delete/<?= $item['id']; ?>"> <button class="btn btn-error">hapus</button></a>
                     <div>
                         <a href="#">
-                            <button class="btn btn-warning font-semibold" onclick="my_modal_3.showModal()">Edit</button>
-                            <dialog id="my_modal_3" class="modal">
+                            <button class="btn btn-warning font-semibold" onclick="my_modal_<?= $item['id']; ?>.showModal()">Edit</button>
+                            <dialog id="my_modal_<?= $item['id']; ?>" class="modal">
                                 <div class="modal-box">
                                     <div>
                                         <form action="/update/<?= $item['id']; ?>" method="POST">
@@ -250,8 +250,8 @@
                     </div>
                     <div>
                         <a href="/updateStatus/<?= $item['id']; ?>">
-                            <button class="btn btn-primary <?= ($item['status'] == 'Pending') ? 'btn-error' : 'btn-sucsess' ?>">
-                                <?= ($item['status'] == 'Pending') ? 'Selesaikan' : 'Selesai' ?>
+                            <button class="btn btn-primary <?= ($item['status'] == 'pending') ? 'btn-error' : 'btn-sucsess' ?>">
+                                <?= ($item['status'] == 'pending') ? 'Selesaikan' : 'Selesai' ?>
                             </button>
                         </a>
                     </div>

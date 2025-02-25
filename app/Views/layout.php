@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="<?= base_url('./src/output.css') ?>" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 
 <body>
@@ -17,19 +19,21 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
                         </svg>
                     </label>
-                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a href="#">To-do-List</a></li>
-                        <li><a href="#">Completed</a></li>
-                        <li><a href="#">Pending</a></li>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-semibold">
+                        <li class="hover:font-normal"><a href="/dashboard">Dashboard</a></li>
+                        <li class="hover:font-normal"><a href="/">To-do-List</a></li>
+                        <li class="hover:font-normal"><a href="/completed">Completed</a></li>
+                        <li class="hover:font-normal"><a href="/pending">Pending</a></li>
                     </ul>
                 </div>
                 <a class="btn btn-ghost normal-case text-xl">RifqiProject</a>
             </div>
             <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal px-1">
-                    <li><a href="#">To-do-List</a></li>
-                    <li><a href="#">Completed</a></li>
-                    <li><a href="#">Pending</a></li>
+                <ul class="menu menu-horizontal px-1 font-bold">
+                    <li class="hover:font-normal"><a href="/dashboard">Dashboard</a></li>
+                    <li class="hover:font-normal"><a href="/">To-do-List</a></li>
+                    <li class="hover:font-normal"><a href="/completed">Completed</a></li>
+                    <li class="hover:font-normal"><a href="/pending">Pending</a></li>
                 </ul>
             </div>
             <div class="navbar-end">
@@ -54,13 +58,13 @@
         </div>
     </div>
     <div>
-    <main>
-        <div class="flex flex-row justify-center" >
-        <div class="m-4 w-full border-2 border-base-300 rounded-lg" >
-        <?= $this->renderSection('content') ?>
-        </div>
-        </div>
-    </main>
+        <main>
+            <div class="flex flex-row justify-center">
+                <div class="m-4 w-full border-2 border-base-300 rounded-lg">
+                    <?= $this->renderSection('content') ?>
+                </div>
+            </div>
+        </main>
     </div>
 </body>
 
